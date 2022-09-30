@@ -1,5 +1,6 @@
-a=[*map(int,input().split())]
-k=len(set(a))
-if k == 1:print(a[0]*1000+10000)
-elif k == 2:print(sorted(a)[1]*100+1000)
-else:print(max(a)*100)
+m=int(input())
+for _ in " "*int(input()):
+    a,b=map(int,input().split())
+    m-=a*b
+if m :print("No")
+else :print("Yes")

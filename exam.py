@@ -1,16 +1,9 @@
-def recursion(s, l, r):
-    global cnt
+import bisect
+input()
+a1=input().split()
+a1.sort()
 
-    if l >= r: return 1
-    elif s[l] != s[r]: return 0
-    else: 
-        cnt+=1
-        return recursion(s, l+1, r-1)
-
-def isPalindrome(s):
-    global cnt
-
-    cnt = 1
-    return recursion(s, 0, len(s)-1)
-for _ in " "*int(input()):
-    print(isPalindrome(input()),cnt)
+m=int(input())
+a2=input().split()
+for k in a2:
+    print(1 if bisect.bisect_right(a1,k)-bisect.bisect_left(a1,k) else 0 , end=" ")

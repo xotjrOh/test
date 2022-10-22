@@ -1,4 +1,8 @@
-k=int(input())
-for n in range(k):
-    if k%5 == 0:print(-(k<0) or n+k//5);break
-    k-=3
+l = [1]*10000
+for i in range(2,10000):
+    if l[i]:
+        l[2*i::i]=[0]*len(l[2*i::i])
+for _ in range(int(input())):
+    n = int(input())
+    for i in range(n//2,n):
+        if l[i] and l[n-i]:print(n-i,i);break

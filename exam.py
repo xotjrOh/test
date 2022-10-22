@@ -1,9 +1,4 @@
-import bisect
-input()
-a1=input().split()
-a1.sort()
-
-m=int(input())
-a2=input().split()
-for k in a2:
-    print(1 if bisect.bisect_right(a1,k)-bisect.bisect_left(a1,k) else 0 , end=" ")
+k=int(input())
+for n in range(k):
+    if k%5 == 0:print(-(k<0) or n+k//5);break
+    k-=3
